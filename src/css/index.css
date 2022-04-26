@@ -7,18 +7,26 @@
 }
 
 :root {
-/* ## Colors */
+/* Colors */
+    /* Primary */
+    --Red: hsl(0, 100%, 74%) ;
+    --Green: hsl(154, 59%, 51%);
 
-/* ### Primary */
---Red: hsl(0, 100%, 74%) ;
---Green: hsl(154, 59%, 51%);
+    /* Accent */
+    --Blue: hsl(248, 32%, 49%);
 
-/* ### Accent */
---Blue: hsl(248, 32%, 49%);
+    /* Neutral */
+    --Dark_Blue: hsl(249, 10%, 26%) ;
+    --Grayish_Blue: hsl(246, 25%, 77%);
 
-/* ### Neutral */
---Dark_Blue: hsl(249, 10%, 26%) ;
---Grayish_Blue: hsl(246, 25%, 77%);
+    /* --Grayish Blue with an alpha: */
+    --input_border_color: hsla(246, 25%, 77%, 0.5);
+
+/* Shadows */
+    --box-shadow: 0 10px 1px -2px rgba(0, 0, 0, 0.2);
+    --box-shadow-btn-green: 
+        0 3px 0 1px rgba(0, 0, 0, 0.2), 
+        0 3px 0 1px var(--Green)
 }
 
 body {
@@ -73,7 +81,7 @@ button#try-it-btn {
     color: white;
     border-radius: 10px;
     padding: 20px 0;
-    box-shadow: 0 8px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
     margin-bottom: 25px;
 }
 
@@ -90,7 +98,7 @@ button#try-it-btn {
     background-color: white;
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0 8px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
 }
 
 .form form {
@@ -102,14 +110,53 @@ form input, form button {
     border-radius: 5px;
 }
 
+.form-input {
+    position: relative;
+    margin-bottom: 15px;
+}
+
 form input {
     padding: 18px;
-    margin-bottom: 15px;
-    border: 1px solid var(--Grayish_Blue);
+    border: 1px solid var(--input_border_color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 form input:focus {
     outline: 1px solid var(--Dark_Blue);
+}
+
+form input.error {
+    border: 2px solid var(--Red);
+    color: var(--Red);
+}
+
+form input.error:focus {
+    border: 2px solid var(--Red);
+    outline: 1px solid var(--Red);
+}
+
+.icon-error {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 17px;
+    padding-right: 25px;
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.feedback {
+    width: 100%;
+    text-align: end;
+    color: var(--Red);
+    font-size: 0.65rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 5px;
 }
 
 form input::placeholder {
@@ -126,7 +173,11 @@ form button {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    box-shadow: 0 5px rgba(0, 0, 0, 0.1), 0 5px var(--Green);
+    box-shadow: var(--box-shadow-btn-green);
+}
+
+form button:hover {
+    opacity: 0.65;
 }
 
 .form .terms-of-use {
@@ -134,12 +185,14 @@ form button {
     font-size: 10px;
     margin: 0 20px;
     text-align: center;
+    cursor: pointer;
 }
 
-.form .terms-of-use span {
+.form .terms-of-use a {
     font-weight: 700;
     color: var(--Red);
     line-height: 2.5;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 1280px) {
@@ -196,8 +249,15 @@ form button {
         padding: 45px;
     }
 
+    .form-input {
+        margin-bottom: 20px;
+    }
+
 }
 
+button {
+    cursor: pointer;
+}
 
 footer#main {
     margin: 10px 0;

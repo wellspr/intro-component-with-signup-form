@@ -20,39 +20,71 @@
         </p>
       </header>
 
-      <button id="try-it-btn">
+      <button 
+        id="try-it-btn"
+        type="submit"
+        form="try-form"
+        >
         <p><span>Try it free 7 days</span> then</p> 
         <p>$20/mo. thereafter</p>
       </button>
 
       <div class="form">
-        <form>
-          <input 
-            type="text"
-            name="first_name"
-            placeholder="First Name"
-          >
-          <input
-            type="text"
-            name="last_name"
-            placeholder="Last Name "
-          >
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-          >
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-          >
-          <button type="submit" id="submit-btn">Claim your free trial </button>
+        <form id="try-form" novalidate method="post">
+          <div class="form-input">
+            <label for="first_name" hidden>First Name</label>
+            <input 
+              id="first_name"
+              type="text"
+              name="first_name"
+              placeholder="First Name"
+
+            >
+            <p class="feedback first_name"></p>
+            <img class="icon-error first_name" alt="" src="images/icon-error.svg">
+          </div>
+          <div class="form-input">
+            <label for="last_name" hidden>Last Name</label>
+            <input
+              id="last_name"
+              type="text"
+              name="last_name"
+              placeholder="Last Name"
+            >
+            <p class="feedback last_name"></p>
+            <img class="icon-error last_name" alt="" src="images/icon-error.svg">
+          </div>
+          <div class="form-input">
+            <label for="email" hidden>Email Adress</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+            >
+            <p class="feedback email"></p>
+            <img class="icon-error email" alt="" src="images/icon-error.svg">
+          </div>
+          <div class="form-input">
+            <label for="password" hidden>Password</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+            >
+            <p class="feedback password"></p>
+            <img class="icon-error password" alt="" src="images/icon-error.svg">
+          </div>
+          <button 
+            type="submit" 
+            id="submit-btn"
+            >
+            Claim your free trial 
+          </button>
         </form>
 
         <div class="terms-of-use">
           By clicking the button, you are agreeing to our 
-          <span>Terms and Services</span>
+          <a href="#" role="button">Terms and Services</span>
         </div>
       </div>
     </div>

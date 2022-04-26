@@ -54,7 +54,10 @@ Users should be able to:
 
 ### Useful resources
 
-<!-- - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward. -->
+
+- [https://stackoverflow.com/a/9204568](https://stackoverflow.com/a/9204568) - A stackoverflow answer showing a very basic email validation via regex.
+
+- [https://www.w3schools.com/jsref/jsref_obj_regexp.asp](https://www.w3schools.com/jsref/jsref_obj_regexp.asp) - This is a regex reference. Useful to understant the regex expression in the email validation test on the javascript side of the application.
 
 
 ## Author
