@@ -52,7 +52,6 @@ main {
 
 .container {
     width: 375px;
-    height: 1000px;
     padding: 5.5rem 30px;
 }
 
@@ -208,7 +207,6 @@ form button:hover {
     .container {
         position: relative;
         width: 1100px;
-        height: 800px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -249,7 +247,7 @@ form button:hover {
     }
 
     div.form {
-        padding: 45px;
+        padding: 40px 45px;
     }
 
     .form-input {
@@ -266,5 +264,5 @@ footer#main {
     margin: 10px 0;
 }
 
-footer .attribution { font-size: 11px; text-align: center; }
-footer .attribution a { color: hsl(228, 45%, 44%); }
+footer#main .attribution { font-size: 11px; text-align: center; }
+footer#main .attribution a { color: hsl(228, 45%, 44%); }
