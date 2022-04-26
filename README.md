@@ -36,7 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-html-css-with-flexbox-and-js-BJgXZYrBc](https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-html-css-with-flexbox-and-js-BJgXZYrBc)
+
 - Live Site URL: [https://intro-component-with-signup-form-wellspr.vercel.app/](https://intro-component-with-signup-form-wellspr.vercel.app/)
 
 ## My process
