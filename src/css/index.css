@@ -83,14 +83,16 @@ button#try-it-btn {
     padding: 20px 0;
     box-shadow: var(--box-shadow);
     margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
-#try-it-btn p {
+#try-it-btn .try-it-text {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1rem;
 }
-#try-it-btn p span {
+#try-it-btn .try-it-text strong {
     font-weight: 700;
 }
 
@@ -242,6 +244,7 @@ form button:hover {
     button#try-it-btn {
         padding: 18px 0;
         display: flex;
+        flex-direction: row;
         justify-content: center;
     }
 
