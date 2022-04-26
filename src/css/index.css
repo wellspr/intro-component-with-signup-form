@@ -84,6 +84,8 @@ button#try-it-btn {
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #try-it-btn .try-it-text {
