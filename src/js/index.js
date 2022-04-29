@@ -31,13 +31,13 @@ form.addEventListener("submit", e => {
         const inputNode = document.querySelector(`input[name=${entry[0]}]`);
         const errorIcon = document.querySelector(`.icon-error.${entry[0]}`);
         const fieldName = document.querySelector(`label[for=${entry[0]}]`).innerHTML;
-        const feedbackNode = document.querySelector(`.feedback.${entry[0]}`)
+        const feedbackNode = document.querySelector(`.feedback.${entry[0]}`);
 
         // test 1 -> empty?
         if (!entry[1]) {
             inputNode.classList.add("error");
             errorIcon.classList.add("visible");
-            feedbackNode.innerHTML = `${fieldName} cannot be empty`
+            feedbackNode.innerHTML = `${fieldName} cannot be empty`;
         }
 
         // test 2 -> wrong values?
@@ -45,7 +45,7 @@ form.addEventListener("submit", e => {
             if (!isValidEmail(entry[1])) {
                 inputNode.classList.add("error");
                 errorIcon.classList.add("visible");
-                feedbackNode.innerHTML = `Looks like this is not an email`
+                feedbackNode.innerHTML = `Looks like this is not an email`;
             }
         }
 
